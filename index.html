@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App lista de tareas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <article class="list roundBorder">
+        <div class="date">
+            <div class="dateRight">
+                <div id="dateNumber"></div>
+                <div>
+            
+
+            <div id="dateMonth"></div>
+            <div id="dateYear"></div>
+            </div>
+        </div>
+         <div id="dateText"></div>
+     </div>
+      <form onsubmit="addNewTask(event)" >
+        <input type="text" name="taskText" autocomplete="off" placeholder="Nueva tarea" class="roundBorder">
+        <button type="submit" class="addTaskButton">+</button>
+        <button type="button" class="orderButton roundBorder" onclick="ordenarTareas()">Ordenar</button>
+    </form>
+    <div id="taskContainer"></div>
+    </article>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
