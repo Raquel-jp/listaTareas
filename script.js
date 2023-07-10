@@ -36,16 +36,20 @@ const addNewTask = event => {
     event.target.reset(); //resetear el form para que nos quede limpio el imput.
 };
 const changeTaskState = event => {
-    event.target.classList.toogle('done');
+    event.target.classList.toggle('done');
 }
 const order = () => {
     const done = [];
     const toDo = [];
     taskContainer.childNodes.forEach( el =>{
-        el
+        el.classList.contains('done') ? done.push(el) : toDo.push(el)
+        
     })
+    return[...toDo, ...done];
 }
 
-
+const ordenarTareas = () => {
+    order().forEach(el=> taskContainer.appendChild(el))
+}
 
 setDate();
